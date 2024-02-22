@@ -1,5 +1,6 @@
 def call(String mavenGoal){
-  
+    def mavenHome= tool name: "maven-3.9.6"
+
   if ("${mavenGoal}" == "Clean")
      {
        sh "mvn clean"
