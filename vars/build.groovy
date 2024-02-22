@@ -12,8 +12,16 @@ def call(String mavenGoal){
      {
        sh "mvn clean test"
      }
-   else if ("${mavenGoal}" == "Package")
+   else if ("${mavenGoal}" == "Build")
       {
         sh "mvn clean package"
      }
+  else if("$mavenGoal}" == "ExecuteSonar")
+  {
+        sh "mvn clean sonar:sonar
+  }
+  else if("$mavenGoal}" == "DeployArtifactsToNexus")
+  {
+        sh "mvn clean deploy"
+  }
 }
