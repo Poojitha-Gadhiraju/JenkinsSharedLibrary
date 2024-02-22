@@ -14,7 +14,7 @@ def call(String mavenGoal){
      }
    else if ("${mavenGoal}" == "Build")
       {
-        sh "mvn clean package"
+        sh "${mavenHome}/bin/mvn clean package"
      }
   else if("$mavenGoal}" == "ExecuteSonar")
   {
